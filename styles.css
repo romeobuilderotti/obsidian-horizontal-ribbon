@@ -1,8 +1,34 @@
-/*
+/* Horizontal ribbon styles */
+.workspace-ribbon.horizontal-ribbon {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	height: 40px;
+	align-items: center;
+	justify-content: space-between;
+	padding: 4px 8px;
+	box-sizing: border-box;
+	margin: 0;
+	border-top: 1px solid var(--divider-color);
+	border-right: 0;
+	background-color: var(--background-secondary);
+	flex: 0 0 40px;
+	overflow-x: auto;
+}
 
-This CSS file will be included with your plugin, and
-available in the app when your plugin is enabled.
+/* Actions container within horizontal ribbon */
+.horizontal-ribbon .side-dock-actions {
+	flex-direction: row;
+	flex: 0 0 auto;
+	margin-right: auto;
+}
 
-If your plugin does not need CSS, delete this file.
+/* Hide the resize handle adjacent to the horizontal ribbon */
+.workspace-tabs:has(+ .workspace-ribbon.horizontal-ribbon) .workspace-leaf-resize-handle {
+	display: none;
+}
 
-*/
+/* Remove some leftover elements, not sure what they are for tbh */
+.workspace-ribbon.horizontal-ribbon.mod-left:before {
+	content: none;
+}
