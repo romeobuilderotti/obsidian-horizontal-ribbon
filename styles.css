@@ -1,19 +1,20 @@
 /* Horizontal ribbon styles */
 .workspace-ribbon.horizontal-ribbon {
 	display: flex;
+	flex: 0 0 40px;
 	flex-direction: row;
 	width: 100%;
 	height: 40px;
 	align-items: center;
 	justify-content: space-between;
 	padding: 4px 8px;
-	box-sizing: border-box;
 	margin: 0;
+	box-sizing: border-box;
 	border-top: 1px solid var(--divider-color);
 	border-right: 0;
 	background-color: var(--background-secondary);
-	flex: 0 0 40px;
 	overflow-x: auto;
+	order: 2;
 }
 
 /* Actions container within horizontal ribbon */
@@ -21,11 +22,6 @@
 	flex-direction: row;
 	flex: 0 0 auto;
 	margin-right: auto;
-}
-
-/* Hide the resize handle adjacent to the horizontal ribbon */
-.workspace-tabs:has(+ .workspace-ribbon.horizontal-ribbon) .workspace-leaf-resize-handle {
-	display: none;
 }
 
 /* Remove some leftover elements, not sure what they are for tbh */

@@ -52,7 +52,13 @@ export default class HorizontalRibbonPlugin extends Plugin {
     this.ribbonEl.addClass("horizontal-ribbon");
 
     // Move the ribbon inside the left sidebar
-    this.leftSidebarEl.appendChild(this.ribbonEl);
+    const resizeHandle = this.leftSidebarEl.querySelector("hr.workspace-leaf-resize-handle");
+    if (resizeHandle) {
+      resizeHandle.insertAdjacentElement("afterend", this.ribbonEl);
+    } else {
+      console.warn("HorizontalRibbonPlugin: Resize handle not found, appending ribbon as the first child.");
+      this.leftSidebarEl.insertBefore(this.ribbonEl, this.leftSidebarEl.firstChild);
+    }
 
     // Change icon tooltip position
     this.ribbonEl.querySelectorAll(".side-dock-ribbon-action")
