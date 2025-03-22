@@ -6,6 +6,7 @@ This plugin changes the default vertical ribbon in Obsidian to a horizontal one,
 
 - Transforms the left sidebar ribbon from vertical to horizontal orientation
 - Maintains all functionality of the original ribbon
+- Tested on default and minimal themes
 
 ## Installation
 
@@ -26,7 +27,7 @@ This plugin changes the default vertical ribbon in Obsidian to a horizontal one,
 
 ## Usage
 
-Once enabled, the plugin automatically transforms the left ribbon to a horizontal layout without requiring any configuration. The ribbon will appear at the top of the left sidebar.
+Once enabled, the plugin automatically transforms the left ribbon to a horizontal layout without requiring any configuration. The ribbon will appear at the bottom of the left sidebar.
 
 ## Development
 
